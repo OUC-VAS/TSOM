@@ -145,7 +145,7 @@ We also provide the pretrained models.
 
 | Model                                                                                                                                                      | Description
 |:-----------------------------------------------------------------------------------------------------------------------------------------------------------| :----------
-| [pretrained-r30](https://stuouceducn-my.sharepoint.com/:u:/g/personal/liyunfei_x_stu_ouc_edu_cn/EbDYY5UOmbBAjQOy8mOH0EQBaNtDJ8idUdhjvfhbzT55sg?e=fZTLg5) | Trained on `facial_components` and `facial_attributes` with `resnet34` backbone.
+| [pretrained-r34](https://stuouceducn-my.sharepoint.com/:u:/g/personal/liyunfei_x_stu_ouc_edu_cn/EbDYY5UOmbBAjQOy8mOH0EQBaNtDJ8idUdhjvfhbzT55sg?e=fZTLg5) | Trained on `facial_components` and `facial_attributes` with `resnet34` backbone.
 | [pretrained-r50](https://stuouceducn-my.sharepoint.com/:u:/g/personal/liyunfei_x_stu_ouc_edu_cn/EWc73GE9cTJKvM2u1Q86I28BvLcrupB3UMQYduXpvO1w_w?e=lI9z6x) | Trained on `facial_components` and `facial_attributes` with `resnet50` backbone.
 
 In order to try the pre-trained checkpoints, please:
