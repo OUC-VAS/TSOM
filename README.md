@@ -176,11 +176,11 @@ In order to try the pre-trained checkpoints, please:
 ## 🎓 Citation
 If you find this work useful for your research, please kindly cite our paper:
 ```
-@inproceedings{li2024texture,
+@inproceedings{li2025texture,
   title={Texture, Shape and Order Matter:A New Transformer Design for Sequential DeepFake Detection},
   author={Yunfei Li, Yuezun Li, Xin Wang, Baoyuan Wu, Jiaran Zhou, Junyu Dong},
   booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  year={2024}
+  year={2025}
 }
 ```
 
