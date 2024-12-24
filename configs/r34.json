@@ -38,7 +38,7 @@
         "lambda2": 0.01,
         "dim_fac":108,
         "fla_dim":64,
-        "alpha": 0.001
+        "alpha": 0.008
     },
     "dataset":{
         "imgsize": 256
