@@ -21,8 +21,6 @@
         "SOS_token_id": 0,
         "EOS_token_id": 6,
         "PAD_token_id": 7,
-        "smooth": 2,
-        "dynamic_scale": "type2",
         "max_position_embeddings": 6,
         "vocab_size": 8,
         "layer_norm_eps": 1e-12,
