@@ -5,7 +5,7 @@
         "Frozen_BatchNorm2d": false
     },
     "optimizer":{
-        "batch_size": 32,
+        "batch_size": 64,
         "lr_backbone": 1e-4,
         "lr": 2e-5,
         "epochs": 170,
