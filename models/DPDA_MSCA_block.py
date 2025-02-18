@@ -464,7 +464,7 @@ class Seq_TransformerDecoderLayer(nn.Module):
             z = self.reparameterize(mu, log_var)
             output = self.decode(z, bs)
             mu2, log_var2 = mu.contiguous().view(6, bs, 2), log_var.contiguous().view(6, bs, 2)
-            mu2, log_var2 = mu2.repeat(1, 1, self.nhead).sigmoid() * 8, log_var2.repeat(1, 1, self.nhead).exp()
+            mu2, log_var2 = mu2.repeat(1, 1, self.nhead).sigmoid() * 4, log_var2.repeat(1, 1, self.nhead).exp()
 
             mu2_offset, log_var2_offset = self.point1(result).view(6, bs, 8).sigmoid(), self.point2(result).view(6, bs,
                                                                                                                  8).sigmoid()
