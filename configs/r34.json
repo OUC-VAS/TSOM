@@ -5,7 +5,7 @@
         "Frozen_BatchNorm2d": false
     },
     "optimizer": {
-        "batch_size": 32,
+        "batch_size": 64,
         "lr_backbone": 1e-4,
         "lr": 2e-5,
         "epochs": 170,
@@ -38,7 +38,7 @@
         "lambda2": 0.01,
         "dim_fac":108,
         "fla_dim":64,
-        "alpha": 0.008
+        "alpha": 0.005
     },
     "dataset":{
         "imgsize": 256
