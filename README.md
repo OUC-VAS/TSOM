@@ -13,7 +13,7 @@ A New Transformer Design for Sequential DeepFake Detection</h1>
 </div>
 
 <h4 align="center">
-  <a href="[https://openaccess.thecvf.com/content/WACV2025/papers/Li_Texture_Shape_and_Order_Matter_A_New_Transformer_Design_for_WACV_2025_paper.pdf]" target='_blank'>[Paper]</a>
+  <a href="https://openaccess.thecvf.com/content/WACV2025/papers/Li_Texture_Shape_and_Order_Matter_A_New_Transformer_Design_for_WACV_2025_paper.pdf" target='_blank'>[Paper]</a>
 </h4>
 
 
