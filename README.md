@@ -177,10 +177,12 @@ In order to try the pre-trained checkpoints, please:
 If you find this work useful for your research, please kindly cite our paper:
 ```
 @inproceedings{li2025texture,
-  title={Texture, Shape and Order Matter:A New Transformer Design for Sequential DeepFake Detection},
-  author={Yunfei Li, Yuezun Li, Xin Wang, Baoyuan Wu, Jiaran Zhou, Junyu Dong},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  year={2025}
+  title={Texture, Shape and Order Matter: A New Transformer Design for Sequential DeepFake Detection},
+  author={Li, Yunfei and Li, Yuezun and Wang, Xin and Wu, Baoyuan and Zhou, Jiaran and Dong, Junyu},
+  booktitle={2025 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  pages={202--211},
+  year={2025},
+  organization={IEEE}
 }
 ```
 
