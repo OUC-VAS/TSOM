@@ -141,6 +141,46 @@ def create_caption_and_mask(cfg):
 
     return caption_template, mask_template
 
+class SMCL_Loss(nn.Module):
+    def __init__(self, temperature=0.07): 
+        super(InfoNCELoss, self).__init__()
+        self.temperature = temperature
+
+    def forward(self, features, targets):
+        batch_size = features.size(0)
+        feature_dim = features.size(2)
+
+        # Flatten features: (batch_size, seq_len, feature_dim) -> (batch_size * seq_len, feature_dim)
+        features = features.reshape(-1, feature_dim)
+
+        # Normalize features for cosine similarity
+        features = F.normalize(features, p=2, dim=-1)
+
+        # Similarity matrix
+        similarity_matrix = torch.matmul(features, features.t()) / self.temperature
+
+        # Flatten targets
+        targets = targets.contiguous().view(-1)
+
+        # Create positive mask
+        positive_mask = (targets.unsqueeze(0) == targets.unsqueeze(1)).float()
+
+        # Compute exp(similarity_matrix)
+        exp_sim = torch.exp(similarity_matrix)
+
+        # mask = torch.eye(384, dtype=torch.bool).cuda()
+        # x_grid, y_grid = torch.meshgrid(targets, targets, indexing='ij')
+        # mask |= (x_grid == 7) & (y_grid == 7)
+        # mask |= (x_grid == 6) & (y_grid == 6)
+
+        # Numerator and denominator
+        fenzi = exp_sim * positive_mask  # Numerator
+        fenmu = exp_sim    # Denominator
+
+        loss = -torch.log(fenzi.sum(1) / fenmu.sum(1))
+        loss = loss / 32
+        
+        return loss.sum()
 
 def evalute_transformer(cfg, val_dataloader, model):
     # switch model to evaluation mode
@@ -199,6 +239,7 @@ def train(args, cfg, train_dataloader, train_sampler, val_dataloader, model, sum
     model, optimizer, start_epoch, scheduler = preset_model(args, cfg, model, logger, sum_steps)
 
     criterion = torch.nn.CrossEntropyLoss(ignore_index = cfg.PAD_token_id).cuda(args.gpu)
+    cont = SMCL_Loss() #Contrastive Learning loss
     
     global_step = start_epoch*len(train_dataloader)
     if args.log:
@@ -237,7 +278,9 @@ def train(args, cfg, train_dataloader, train_sampler, val_dataloader, model, sum
 
             outputs, loss_vae = model(samples, input_caps, input_cap_masks)
             loss = criterion(outputs.permute(0, 2, 1), caps[:, 1:])
-            loss = loss + loss_vae['loss']
+            loss_cont = cont(outputs.permute(1, 0, 2), caps[:, 1:])
+            loss = loss + loss_vae['loss'] + loss_cont * 0.01
+            
             if not math.isfinite(loss):
                 print(f'Loss is {loss}, stopping training')
                 sys.exit(1)
