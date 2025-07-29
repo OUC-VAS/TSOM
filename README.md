@@ -20,6 +20,7 @@ A New Transformer Design for Sequential DeepFake Detection</h1>
 </div>
 
 ## 📢 Updates
+- [07/2025] The code for the extended paper has been updated.
 - [12/2024] Pretrained models are uploaded.
 - [12/2024] Code is released.
 - [10/2024] Accepted to WACV 2025.
