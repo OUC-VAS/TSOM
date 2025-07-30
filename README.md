@@ -1,12 +1,11 @@
 <div align="center">
 
-<h1>Texture, Shape and Order Matter:
-A New Transformer Design for Sequential DeepFake Detection</h1>
+<h1>Texture, Shape, Order, and Relation Matter: A New Transformer Design for Sequential DeepFake Detection</h1>
 
 <div>
     <a href='https://yunfeili-heng.github.io//' target='_blank'>Yunfei Li</a>,
     <a href='https://yuezunli.github.io//' arget='_blank'>Yuezun Li<sup>*</sup></a>,
-    Xin Wang, Baoyuan Wu, Jiaran Zhou, Junyu Dong
+    Baoyuan Wu, Junyu Dong, Guopu Zhu, Siwei Lyu
 </div>
 <div>
     VAS-Group, Ocean University of China&emsp;
@@ -21,6 +20,8 @@ A New Transformer Design for Sequential DeepFake Detection</h1>
 
 ## 📢 Updates
 - [07/2025] The code for the extended paper has been updated.
+- [07/2025] <a href="https://arxiv.org/abs/2404.13873"><img src="https://img.shields.io/badge/arXiv-PDF-b31b1b" height="16"></a>
+extension paper released.
 - [12/2024] Pretrained models are uploaded.
 - [12/2024] Code is released.
 - [10/2024] Accepted to WACV 2025.
@@ -28,7 +29,7 @@ A New Transformer Design for Sequential DeepFake Detection</h1>
 paper
 
 ## 🪧 Introduction
-This is the official implementation of *Texture, Shape and Order Matter:
+[WACV 2025(Oral)]This is the official implementation of *Texture, Shape and Order Matter:
 A New Transformer Design for Sequential DeepFake Detection*. In this paper ,we describe
 a new Transformer design, called TSOM, by exploring three perspectives: Texture, Shape, and Order of Manipulations. Extensive experimental results demonstrate that our
 method outperforms others by a large margin, highlighting the superiority of our method.
@@ -184,6 +185,14 @@ If you find this work useful for your research, please kindly cite our paper:
   pages={202--211},
   year={2025},
   organization={IEEE}
+}
+```
+```
+@article{li2025texture,
+      title={Texture, Shape, Order, and Relation Matter: A New Transformer Design for Sequential DeepFake Detection}, 
+      author={Yunfei Li and Yuezun Li and Baoyuan Wu and Junyu Dong and Guopu Zhu and Siwei Lyu},
+      journal={arXiv preprint arXiv:2404.13873},
+      year={2025}
 }
 ```
 
