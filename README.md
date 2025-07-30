@@ -29,7 +29,7 @@ extension paper released.
 paper
 
 ## 🪧 Introduction
-[WACV 2025(Oral)]This is the official implementation of *Texture, Shape and Order Matter:
+This is the official implementation of *Texture, Shape and Order Matter:
 A New Transformer Design for Sequential DeepFake Detection*. In this paper ,we describe
 a new Transformer design, called TSOM, by exploring three perspectives: Texture, Shape, and Order of Manipulations. Extensive experimental results demonstrate that our
 method outperforms others by a large margin, highlighting the superiority of our method.
